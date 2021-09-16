@@ -1,0 +1,40 @@
+[push]
+    default = simple
+
+[core]
+    longpaths = true
+{{- if (eq .chezmoi.os "windows") }}
+    pager = less
+    autocrlf = true
+{{- else }}
+    autocrlf = input
+{{- end }}
+
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    wt = worktree
+    df = diff
+    lg = log --stat --date=local --pretty
+    cln = clean -dfx
+    brls = branch -vv
+    cobr = checkout -t -b
+    brlsa = branch -ar
+
+[branch]
+    autosetupmerge = true
+
+[log]
+    date = format-local:%Y-%m-%d %H:%M
+
+[format]
+    pretty = format:------------------------------------------------------------------------------------------%n   %Cgreen%h by %aN on %ad %n%Cblue   %<(80,trunc)%s%n%Cred   %b%Creset------------------------------------------------------------------------------------------
+
+[rebase]
+    autoStash = true
+
+[include]
+  path = user
+  path = proxy
