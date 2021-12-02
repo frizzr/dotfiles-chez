@@ -6,6 +6,7 @@
 {{- if (eq .chezmoi.os "windows") }}
     pager = less
     autocrlf = true
+	sshCommand = 'C:\\Windows\\System32\\OpenSSH\\ssh.exe'
 {{- else }}
     autocrlf = input
 {{- end }}
