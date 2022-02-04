@@ -48,6 +48,7 @@ Plug 'Olical/vim-enmasse'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'pprovost/vim-ps1'
 Plug 'ryanoasis/vim-devicons'
+Plug 'will133/vim-dirdiff'
 
 call plug#end()
 
